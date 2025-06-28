@@ -3,7 +3,7 @@
   stories:
     - Select tech stack and document it in README
     - Create GitHub repo with client and server folders
-    - Set up GitHub Project board with columns
+    - Set up Linear workspace and project board with columns
     - Set up Codespace & .devcontainer for Node.js environment
     - Add Prettier + ESLint + Tailwind CSS IntelliSense to dev container
     - Deploy test Hello World app to Vercel (frontend)

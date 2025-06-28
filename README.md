@@ -1,4 +1,3 @@
-
 # 🗯️ FunnyComments
 
 > A real-time multiplayer web game where players compete to write the funniest comment about a product or image. Each round is full of laughs, GIFs, emojis, and quick thinking!
@@ -10,6 +9,7 @@
 ## 🎯 About
 
 **FunnyComments** is a party-style web game where:
+
 - An admin creates a game room.
 - Players join with a nickname and emoji avatar.
 - A product image or Amazon link is shown.
@@ -36,8 +36,8 @@ Perfect for remote game nights, team bonding, or casual fun.
 
 ## 🧰 Tech Stack
 
-| Layer      | Technology                          |
-|------------|--------------------------------------|
+| Layer      | Technology                           |
+| ---------- | ------------------------------------ |
 | Frontend   | React + Vite + Tailwind CSS          |
 | Backend    | Node.js + Express + Socket.io        |
 | Realtime   | WebSockets (Socket.io)               |
@@ -59,11 +59,13 @@ cd funnycomments
 ### 2. Setup Environment
 
 #### Codespaces (Recommended)
+
 Click the **[Code → Open with Codespaces]** button and GitHub will launch your dev container with everything preinstalled.
 
 #### Local Development
 
 **Frontend**
+
 ```bash
 cd client
 npm install
@@ -71,6 +73,7 @@ npm run dev
 ```
 
 **Backend**
+
 ```bash
 cd server
 npm install
@@ -80,11 +83,13 @@ npm run dev
 ### 3. Create `.env` Files
 
 **For `client/.env`:**
+
 ```env
 VITE_GIPHY_API_KEY=your_giphy_key
 ```
 
 **For `server/.env`:**
+
 ```env
 PORT=3001
 ```
@@ -116,8 +121,8 @@ funnycomments/
 
 ## 📸 Screenshots & Diagrams
 
-| Game Flow | Socket Event Flow |
-|-----------|-------------------|
+| Game Flow                                    | Socket Event Flow                                  |
+| -------------------------------------------- | -------------------------------------------------- |
 | ![Game Flow](diagrams/game_flow_diagram.png) | ![Socket Events](diagrams/socket_flow_diagram.png) |
 
 ---
@@ -146,6 +151,7 @@ funnycomments/
 ## 👥 Contributing
 
 Contributions are welcome! Here's how to get started:
+
 1. Fork this repo
 2. Create a new branch: `feat/your-feature-name`
 3. Commit your changes with clear messages
@@ -164,3 +170,11 @@ MIT License. Feel free to fork and remix it for your own game night or hackathon
 Built with ❤️ for the joy of creativity, laughter, and playful competition.
 
 > "A little nonsense now and then, is relished by the wisest men." – Roald Dahl
+
+---
+
+## 📋 Project Management
+
+This project uses **Linear** for issue tracking, epics, and sprint planning. All tasks, bugs, and feature requests are managed in Linear instead of GitHub Projects.
+
+---
