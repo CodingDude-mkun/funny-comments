@@ -1,0 +1,22 @@
+{
+  "name": "funny-comments",
+  "version": "1.0.0",
+  "description": "> A real-time multiplayer web game where players compete to write the funniest comment about a product or image. Each round is full of laughs, GIFs, emojis, and quick thinking!",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=client\" \"npm run dev --workspace=server\""
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
