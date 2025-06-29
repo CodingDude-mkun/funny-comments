@@ -1,5 +1,15 @@
 # GitHub Copilot Agent Instructions for FunnyComments Project
 
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+This project uses GitHub Copilot and Copilot Chat to assist with code generation, documentation, and best practices. Please use Copilot to:
+
+- Generate boilerplate code
+- Suggest improvements
+- Write tests and documentation
+
+Always review Copilot suggestions for accuracy and security before merging.
+
 ## Project Overview
 
 FunnyComments is a real-time multiplayer web game where players join a room, write funny comments about a product image or Amazon link, and vote on the funniest comment. The game is played in multiple rounds, with a focus on real-time interaction, responsive UI, and media-rich comments.

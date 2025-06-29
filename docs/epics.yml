@@ -1,97 +1,97 @@
 - epic: Project Initialization & Tech Stack
   description: "All tasks related to setting up tech stack, project structure, and development environment."
   stories:
-    - Select tech stack and document it in README
-    - Create GitHub repo with client and server folders
-    - Set up Linear workspace and project board with columns
-    - Set up Codespace & .devcontainer for Node.js environment
-    - Add Prettier + ESLint + Tailwind CSS IntelliSense to dev container
-    - Deploy test Hello World app to Vercel (frontend)
-    - Deploy test API to Railway or Render (backend)
+    - [x] Select tech stack and document it in README
+    - [x] Create GitHub repo with client and server folders
+    - [x] Set up Linear workspace and project board with columns
+    - [x] Set up Codespace & .devcontainer for Node.js environment
+    - [x] Add Prettier + ESLint + Tailwind CSS IntelliSense to dev container
+    - [x] Deploy test Hello World app to Vercel (frontend)
+    - [ ] Deploy test API to Railway or Render (backend)
 
 - epic: Room & Player Setup
   description: "Tasks to manage room creation, joining, player identity, and lobby logic."
   stories:
-    - Create lobby UI: nickname + emoji avatar + room code input
-    - Create backend route for room creation with unique code
-    - Handle room joining via Socket.io and maintain room state
-    - Show list of joined players in the lobby
-    - Prevent duplicate nicknames and avatars
-    - Store player name/avatar in local/session storage
+    - [ ] Create lobby UI: nickname + emoji avatar + room code input
+    - [ ] Create backend route for room creation with unique code
+    - [ ] Handle room joining via Socket.io and maintain room state
+    - [ ] Show list of joined players in the lobby
+    - [ ] Prevent duplicate nicknames and avatars
+    - [ ] Store player name/avatar in local/session storage
 
 - epic: Game Round Flow
   description: "Handles game round initialization, timers, product display, and round transitions."
   stories:
-    - Admin can upload product image or paste Amazon link
-    - Product and game mode are displayed to players
-    - Start round with countdown timer (server-authoritative)
-    - Players can input funny comments within the timer window
-    - Block comment submissions after timer ends
-    - Show submitted comments anonymously to all players
+    - [ ] Admin can upload product image or paste Amazon link
+    - [ ] Product and game mode are displayed to players
+    - [ ] Start round with countdown timer (server-authoritative)
+    - [ ] Players can input funny comments within the timer window
+    - [ ] Block comment submissions after timer ends
+    - [ ] Show submitted comments anonymously to all players
 
 - epic: Voting Mechanism
   description: "Handles voting phase after comment submission ends, and determines round winner."
   stories:
-    - Start voting phase after comment timer ends
-    - Players can vote on a single comment (excluding their own)
-    - Track votes on server and prevent multiple votes
-    - Display votes and highlight winning comment
-    - Award point to winner and store score
-    - Show per-round and total scores to players
+    - [ ] Start voting phase after comment timer ends
+    - [ ] Players can vote on a single comment (excluding their own)
+    - [ ] Track votes on server and prevent multiple votes
+    - [ ] Display votes and highlight winning comment
+    - [ ] Award point to winner and store score
+    - [ ] Show per-round and total scores to players
 
 - epic: Game Modes (Thematic Twists)
   description: "Allows the admin to choose different themes or prompts for comments."
   stories:
-    - Admin can choose a game mode per round
-    - Game mode is shown clearly to all players
-    - Store game mode for each round in server state
-    - Support random mode selection (optional enhancement)
+    - [ ] Admin can choose a game mode per round
+    - [ ] Game mode is shown clearly to all players
+    - [ ] Store game mode for each round in server state
+    - [ ] Support random mode selection (optional enhancement)
 
 - epic: Comment Enhancements (GIFs, Emojis, Images)
   description: "Adds support for media-rich comments to increase creativity and engagement."
   stories:
-    - Add emoji picker for player comment input
-    - Integrate Giphy API for adding GIFs to comments
-    - Allow uploading images with size/type restrictions
-    - Show comment preview before submission
+    - [ ] Add emoji picker for player comment input
+    - [ ] Integrate Giphy API for adding GIFs to comments
+    - [ ] Allow uploading images with size/type restrictions
+    - [ ] Show comment preview before submission
 
 - epic: UI/UX and Responsive Design
   description: "Covers styling, layout, responsiveness, and general user interface enhancements."
   stories:
-    - Implement responsive layout for mobile and desktop
-    - Style lobby, round, and voting screens with Tailwind CSS
-    - Add loading indicators, error messages, and transitions
-    - Add animations for round start, voting, and results
-    - Highlight winning comment with confetti animation
+    - [ ] Implement responsive layout for mobile and desktop
+    - [ ] Style lobby, round, and voting screens with Tailwind CSS
+    - [ ] Add loading indicators, error messages, and transitions
+    - [ ] Add animations for round start, voting, and results
+    - [ ] Highlight winning comment with confetti animation
 
 - epic: Scoreboard and Game Completion
   description: "Manages score tracking, leaderboard display, and end-of-game flow."
   stories:
-    - Show scoreboard after each round
-    - Display final leaderboard when all rounds are complete
-    - Allow admin to start a new game with same players
-    - Reset all state when new game starts
+    - [ ] Show scoreboard after each round
+    - [ ] Display final leaderboard when all rounds are complete
+    - [ ] Allow admin to start a new game with same players
+    - [ ] Reset all state when new game starts
 
 - epic: Security and Anti-Cheating
   description: "Covers server-side validation, preventing abuse, and basic player moderation."
   stories:
-    - Prevent players from voting on their own comment
-    - Validate all game actions on the server
-    - Block duplicate session joins or reconnects mid-round
-    - Admin can kick or ban a misbehaving player from the room
+    - [ ] Prevent players from voting on their own comment
+    - [ ] Validate all game actions on the server
+    - [ ] Block duplicate session joins or reconnects mid-round
+    - [ ] Admin can kick or ban a misbehaving player from the room
 
 - epic: Testing and QA
   description: "Handles testing of core game flows and edge cases before public deployment."
   stories:
-    - Test game flow with 2–4 players in a room
-    - Test disconnection and reconnection behavior
-    - Write unit tests for backend room and voting logic
-    - Manually test responsiveness on mobile and desktop
+    - [ ] Test game flow with 2–4 players in a room
+    - [ ] Test disconnection and reconnection behavior
+    - [ ] Write unit tests for backend room and voting logic
+    - [ ] Manually test responsiveness on mobile and desktop
 
 - epic: Deployment and CI/CD
   description: "Covers hosting setup and continuous deployment for easier iteration."
   stories:
-    - Set up CI/CD for frontend with Vercel
-    - Set up CI/CD for backend with Railway/Render
-    - Configure environment variables securely for dev/prod
-    - Add README setup instructions for contributors
+    - [ ] Set up CI/CD for frontend with Vercel
+    - [ ] Set up CI/CD for backend with Railway/Render
+    - [ ] Configure environment variables securely for dev/prod
+    - [ ] Add README setup instructions for contributors
