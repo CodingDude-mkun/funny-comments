@@ -12,5 +12,17 @@
     "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss"
   ],
-  "postCreateCommand": "npm install"
+  "forwardPorts": [5173, 3001],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite Frontend",
+      "onAutoForward": "notify"
+    },
+    "3001": {
+      "label": "Express Backend",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "npm install && npm install -g @google/gemini-cli",
 }
+
