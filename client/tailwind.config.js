@@ -7,13 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'sticker-pink': '#FF6B81',
-        'sticker-blue': '#4ECDC4',
-        'sticker-yellow': '#FFE66D',
-        'sticker-purple': '#C77DFF',
-        'sticker-orange': '#FF9F1C',
-        'sticker-green': '#7ED957',
-        'sticker-dark': '#2C3E50',
+        primary: '#FF6B81',
+        secondary: '#4ECDC4',
+        accent: '#FFE66D',
+        background: '#2C3E50',
+        textLight: '#FFFFFF',
+        textDark: '#2C3E50',
       },
     },
   },
