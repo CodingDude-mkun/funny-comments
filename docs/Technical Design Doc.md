@@ -1,4 +1,3 @@
-
 # 🎯 FunnyComments – Technical Design Document
 
 ---
@@ -24,15 +23,15 @@
 
 ### ⚙️ High-Level Stack
 
-| Layer             | Tech                             |
-|------------------|----------------------------------|
-| Frontend (client) | React + Vite + Tailwind CSS       |
-| Backend (server) | Node.js + Express + Socket.io     |
-| Realtime Comm.   | WebSockets (Socket.io)            |
-| Deployment       | Vercel (frontend), Railway (backend) |
-| State Handling   | Zustand or Redux (client), in-memory + RoomManager (server) |
-| Media APIs       | Giphy API (GIFs), local file upload |
-| Storage (future) | Redis or MongoDB (optional)       |
+| Layer             | Tech                                                        |
+| ----------------- | ----------------------------------------------------------- |
+| Frontend (client) | React + Vite + Tailwind CSS                                 |
+| Backend (server)  | Node.js + Express + Socket.io                               |
+| Realtime Comm.    | WebSockets (Socket.io)                                      |
+| Deployment        | Vercel (frontend), Railway (backend)                        |
+| State Handling    | Zustand or Redux (client), in-memory + RoomManager (server) |
+| Media APIs        | Giphy API (GIFs), local file upload                         |
+| Storage (future)  | Redis or MongoDB (optional)                                 |
 
 ---
 
@@ -59,21 +58,25 @@ funnycomments/
 ## 📡 5. Key Socket Events
 
 ### 🔐 Room Lifecycle
+
 - `createRoom (admin)` → `{rounds, timer}`
 - `joinRoom (player)` → `{nickname, emoji}`
 - `roomState` (server to all) → `{players, round, status}`
 
 ### 🕹️ Game Flow
+
 - `startRound (admin)`
 - `submitComment` → `{text, media?}`
 - `endRound` (server-triggered)
 
 ### 🗳️ Voting Phase
+
 - `startVoting`
 - `submitVote` → `{commentId}`
 - `roundResults` → `{winner, scores}`
 
 ### 🔁 Game Control
+
 - `nextRound` (admin)
 - `endGame`
 - `resetGame`
@@ -83,6 +86,7 @@ funnycomments/
 ## 👥 6. Data Models (Simplified)
 
 ### Room
+
 ```ts
 {
   code: string;
@@ -95,6 +99,7 @@ funnycomments/
 ```
 
 ### Player
+
 ```ts
 {
   id: string;
@@ -107,6 +112,7 @@ funnycomments/
 ```
 
 ### Comment
+
 ```ts
 {
   id: string;
@@ -122,18 +128,19 @@ funnycomments/
 
 ## 🎨 7. Frontend UI Pages
 
-| Page             | Features                              |
-|------------------|----------------------------------------|
-| Home / Lobby     | Join/create room, pick nickname/avatar |
-| Game Screen      | Show product, comment form, timer      |
-| Voting Screen    | Anonymized comments, vote button       |
-| Results          | Show winner, scores, confetti          |
+| Page          | Features                               |
+| ------------- | -------------------------------------- |
+| Home / Lobby  | Join/create room, pick nickname/avatar |
+| Game Screen   | Show product, comment form, timer      |
+| Voting Screen | Anonymized comments, vote button       |
+| Results       | Show winner, scores, confetti          |
 
 ---
 
 ## 🧪 8. Testing
 
 ### Manual
+
 - Lobby with 2–4 players
 - Join/leave behavior
 - Comment + vote flows
@@ -141,6 +148,7 @@ funnycomments/
 - Mobile responsiveness
 
 ### Automated (Future)
+
 - Unit tests (Jest for backend)
 - Component tests (Vitest or Playwright for UI)
 
@@ -159,32 +167,47 @@ funnycomments/
 ## 🚀 10. Deployment Plan
 
 ### Codespaces
+
 - `.devcontainer` with Node.js, ESLint, Prettier, Tailwind plugins
 
 ### Vercel
+
 - Frontend auto-deployed on `main` branch
 
 ### Railway
+
 - Backend deployed with webhook trigger
 
 ### Environment Variables
+
 ```
 GIPHY_API_KEY=
 ```
 
 ---
 
+## 🌐 API Deployment
+
+The backend API is deployed on Railway:
+
+- **Base URL:** https://funny-comments-production.up.railway.app
+- **Health Check:** https://funny-comments-production.up.railway.app/api/health
+
+Update your client or environment variables to use this URL for backend API requests.
+
+---
+
 ## 🧱 11. MVP Milestones
 
-| Milestone | Description                                 |
-|-----------|---------------------------------------------|
-| M1        | Project setup, Codespace, Hello World       |
-| M2        | Room creation/joining, lobby with players   |
-| M3        | Admin starts round, comment submission      |
-| M4        | Voting + result logic                       |
-| M5        | Scoring and round loop                      |
-| M6        | UI/UX polish, media support                 |
-| M7        | Deployment + testing                        |
+| Milestone | Description                               |
+| --------- | ----------------------------------------- |
+| M1        | Project setup, Codespace, Hello World     |
+| M2        | Room creation/joining, lobby with players |
+| M3        | Admin starts round, comment submission    |
+| M4        | Voting + result logic                     |
+| M5        | Scoring and round loop                    |
+| M6        | UI/UX polish, media support               |
+| M7        | Deployment + testing                      |
 
 ---
 

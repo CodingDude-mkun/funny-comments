@@ -136,6 +136,27 @@ funnycomments/
 
 ---
 
+## 🌐 API Deployment
+
+The backend API is deployed on Railway:
+
+- **Base URL:** https://funny-comments-production.up.railway.app
+- **Health Check:** https://funny-comments-production.up.railway.app/api/health
+
+Update your client or environment variables to use this URL for backend API requests.
+
+---
+
+## 🌍 Frontend Deployment
+
+The frontend is deployed on Vercel:
+
+- **URL:** https://funny-comments-client.vercel.app/
+
+Access the game and share this link with your players!
+
+---
+
 ## 🧱 Roadmap
 
 - [x] Admin + player room logic
